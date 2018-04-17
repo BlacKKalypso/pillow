@@ -1,0 +1,51 @@
+/*--------------------------------------------------
+#Stylisation de la newslettre
+--------------------------------------------------*/
+
+.subs{
+    
+    margin: 30px auto;
+    
+    
+    @media(min-width: $md){
+    margin: 90px auto;
+    }
+
+    h3{
+
+        @include fontsize(18px);
+        text-transform: uppercase;
+    }
+
+    p{
+        margin-bottom: 50px;
+
+        @include fontsize(12px);
+    }
+
+    form{
+        @media(min-width: $md){
+            margin-left: 35%;
+
+            border-color: #b3b3b3;
+        }
+
+
+
+        input[type=email]{
+            padding: 15px 120px 15px 10px;
+            
+            color: #b3b3b3;
+        }
+        img{
+            margin-left: -10%;
+
+            @media(min-width:$md){
+                margin-left: -5%;
+                color: #b3b3b3;
+            }
+        }
+    }
+}
+
+

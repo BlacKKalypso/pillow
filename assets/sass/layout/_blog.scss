@@ -1,0 +1,134 @@
+/*-----------------------------------------
+#Review pour wordpress
+-----------------------------------------*/
+
+.blog{
+
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+
+    span.icon-arrow-left2{
+        position: absolute;
+        top: 50%;
+    }
+
+    span.icon-arrow-right2{
+        position: absolute;
+        top: 50%;
+        right: 0;
+
+    }
+
+    h3{
+        margin-top: 30px;
+        width: 100%;
+
+        text-align: center;
+        text-transform: uppercase;
+
+        @media(min-width:$md){
+
+            @include fontsize(18px);
+        }
+    }
+    .wordpress{
+
+        @media(min-width: $md){
+            display: flex;
+            justify-content: space-around;
+            background-image: url(../Image/blog/dots.png);
+            background-repeat:repeat-y;
+            background-position: center;
+        }
+
+        span{
+
+            @media(min-width: $md){
+                position: relative;
+                @include fontsize(18px);
+               
+            }
+        }
+
+
+        p{
+            @include fontsize(12px);
+             padding-top: 10px;
+        }
+        
+        .review{
+            text-align: center;
+
+            @media(min-width:$md){
+
+                text-align: right;
+                padding-right: 20px;
+                width: 50%;
+
+                span:before{
+                    position: absolute;
+                    left: calc(100% - 45px);
+                    top: 45px;
+                    height: 0;
+                    width: 40px;
+                    content: '';
+                    
+                    border-top: 1px solid #3d3d3d;
+                }
+            }
+        }
+
+        .comment{
+            padding-left: 20px;
+            width: 50%;
+
+            span:after{
+                position: absolute;
+                left: 0;
+                top: 45px;
+                height: 0;
+                width: 40px;
+                content: '';
+                border-top: 1px solid #3d3d3d;
+            }
+        }
+    }
+
+    .pagination {
+        width: 100%;
+        margin-top: 20px;
+
+        ul {
+            display: block;
+            clear: both;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+
+            li {
+                display: inline-block;
+                margin: 0 2px;
+
+                a {
+                    display: block;
+                    width: 8px;
+                    height: 8px;
+                    background: #d2d2d2;
+                    border: 2px solid transparent;
+
+                    transform: rotate(45deg);
+                }
+
+                &.active {
+                    a {
+                        background: #ffffff;
+                        border-color: #636363;
+
+                        transform: rotate(45deg) scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+}

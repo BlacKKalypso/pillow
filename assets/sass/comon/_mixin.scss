@@ -1,0 +1,48 @@
+/*------------------------------------------
+# Font size
+-------------------------------------------*/
+
+@function calculateRem($px) {
+    $remSize: $px / $base;
+    @return $remSize * 1rem;
+}
+
+@mixin fontsize($px){
+    font-size:calculateRem($px);
+}
+
+/*------------------------------------------
+# List
+-------------------------------------------*/
+
+@mixin unlist() {
+    margin: 0;
+    padding: 0;
+    List-style: none;
+}
+
+/*--------------------------------------------
+#Diposition des trois collections
+--------------------------------------------*/
+
+@mixin card($pourcentage: 100%){
+    a {
+        display: block;
+        position: relative;
+        padding-top:$pourcentage;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        div {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    }
+
+}

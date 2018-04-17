@@ -1,0 +1,79 @@
+/*------------------------------------------------
+#Gestion du logo
+------------------------------------------------*/
+header{
+    .logo{
+
+        float: left;
+        margin-top: 25px;
+        overflow: hidden;
+
+        @media(min-width: $md){
+            width: 70%;
+            display: flex;
+            flex-direction:row;
+        }
+    }
+
+    .pose{
+
+        @media (min-width: $md){
+            padding-left: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        h2{
+            margin: 0;
+            @include fontsize(21px);
+
+            font-family: 'Raleway', sans-serif;
+            text-transform: uppercase;
+
+
+        }
+        h8{
+            @include fontsize(12px);
+        }
+    }
+
+    p:before{
+        clear:both;
+    }
+    p{
+        display: inline-block;
+        width: 71%;
+        margin-top: 90px;
+        text-align: center;
+        @include fontsize(12px);
+
+        @media(min-width:$md){
+            display: block;
+            
+            @include fontsize(24px);
+            text-align: left;
+        }
+    }
+
+
+
+    /*------------------------------------------------
+    #Positionnement de l'hamburger 
+    ------------------------------------------------*/
+    .menu{
+        display: inline-block;
+        transform: translateY(-70px);
+        
+        @media(min-width: $md){
+
+            display:flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            margin-bottom: 1.5%;
+            //A revoir à la fin
+            
+            transform: translateY(0);
+        } 
+    }
+}

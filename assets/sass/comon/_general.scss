@@ -1,0 +1,98 @@
+@import "variables.scss";
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/*--------------------------------------------------
+#Font et la taille de base
+--------------------------------------------------*/
+html, input[type=email]{
+    font-family: 'Roboto Slab', serif;
+    font-size: $base;
+}
+
+.container{
+    @media(min-width: $md){
+        max-width: 1170px;
+        margin: 0 auto;
+        padding-top: 20px;
+
+        &::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    }
+}
+
+.hide-mobile {
+    display: none;
+
+    @media (min-width: $md) { 
+        display: block; 
+    }
+}
+
+.hide-desktop {
+    display: block;
+
+    @media (min-width: $md) { 
+        display: none; 
+    }
+}
+
+/*-------------------------------------------------
+#Ligne de séparations
+------------------------------------------------*/
+hr{
+    width: 100%;
+    border: 1px solid #000000;
+    padding-bottom: 5px;
+    border-left-color: #ffffff;
+    border-right-color: #ffffff;
+    border-top-color: #ffffff;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    clear: both;
+    
+    @media(min-width: $md){
+        border-top-color: #d2d2d2;
+        border-bottom-color: #d2d2d2;
+    }
+}
+
+/*--------------------------------------------------
+#Positionnement de titres et sous titre important
+--------------------------------------------------*/
+.title{
+    text-align: center;
+
+    h3{
+        margin-bottom: 0;
+
+        @include fontsize(18px);
+        text-transform: uppercase;
+    }
+
+    h4{
+        margin-top: 0;
+
+        @include fontsize(12px);
+        font-weight: 300;
+    }
+}
+
+/*---------------------------------------------------
+#Stylisation de mes boutons
+----------------------------------------------------*/
+a.button{
+    width: 40%;
+
+    padding: 18px 15px;
+
+    border: 1px solid #898989;
+    text-align: center;
+    color: #3d3d3d;
+}
+

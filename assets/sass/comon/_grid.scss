@@ -1,0 +1,59 @@
+$grid-columns: 12;
+
+/*------------------------------------------------------
+#Génération de colonnes
+------------------------------------------------------*/
+@for $i from 1 through $grid-columns {
+    .col-xs-#{$i} {
+        width: percentage($i / $grid-columns);
+    }
+}
+
+
+/*--------------------------------------------------
+#Affichage Tablette format portrait
+--------------------------------------------------*/
+@media(min-width: $sm){
+    @for $i from 1 through $grid-columns {
+        .col-sm-#{$i} {
+            width: percentage($i / $grid-columns);
+        }
+    }
+}
+
+/*-------------------------------------------------
+#Affichage Tablette format paysage
+-------------------------------------------------*/
+@media(min-width: $md){
+    @for $i from 1 through $grid-columns {
+        .col-md-#{$i} {
+            width: percentage($i / $grid-columns);
+        }
+    }
+}
+
+/*-------------------------------------------------
+#Affichage ordinateur
+-------------------------------------------------*/
+@media(min-width: $lg){
+    @for $i from 1 through $grid-columns {
+        .col-lg-#{$i} {
+            width: percentage($i / $grid-columns);
+        }
+    }
+}
+
+*[class*="col-"] { 
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+*[class*="col-"]:after{
+    clear: both;
+}
+
+.row {
+    width: calc(100% + 30px);
+    margin: 0 -15px;
+}
