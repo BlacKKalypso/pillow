@@ -29,4 +29,9 @@ gulp.task('commit', function(){
     return gulp.src('./git-test/*')
         .pipe(git.commit('initial commit'));
 });
- 
+
+gulp.task('push', function(){
+    git.push('origin', 'npm', function (err) {
+        if (err) throw err;
+    });
+});
